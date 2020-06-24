@@ -1,0 +1,250 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Roboto&family=Source+Sans+Pro&display=swap";
+
+:root{
+    --color-font: #111111;
+    --color-baner:#FDBFDB;
+}
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    background: whitesmoke;
+    color: var(--color-font);
+    font-family: Roboto, 'sans-serif';
+}
+
+.links-bar{
+    display: grid;
+    grid-template-columns: 200px 100px 1fr;
+    max-width: 960px;
+    margin: auto;
+    justify-self: center;
+    margin-bottom: 50px;
+   
+}
+.links-bar img{
+    width: 91px;
+    height: 27px;
+    margin-bottom: 5px;
+}
+.links-bar a {
+    color: var(--color-font);
+    font-size: 16px;
+    text-decoration: none;
+    padding-top: 30px;
+}
+
+.links-bar a:hover{
+    color: var(--color-baner);
+    transition: 0.5s ease;
+}
+
+.packet{
+    margin: 93px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    max-width: 960px;
+    height: 366px;
+    background-color: var(--color-baner);
+    border-radius: 30px;
+    align-items: center;
+}
+
+.packet-card{
+    color: var(--color-font);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+
+}
+.packet-card h1{
+    margin: auto;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    align-items: center;
+    justify-content: center;
+}
+.packet-card p{
+    margin: auto;
+    margin-bottom: 117px;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+}
+
+.packet-image{
+    margin: 66px auto;
+}
+
+
+.access-most{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 960px;
+    justify-self: center;
+    margin: auto;
+
+}
+.access-most h1{
+   padding-bottom: 20px;
+   
+    
+}
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    margin: 0 auto;
+    gap: 20px;
+    max-width: 960px;  
+    
+}
+.card {
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "image" "text";
+    border-radius: 15px;
+    font-family: roboto;
+    text-align: center;
+    margin: auto;
+    height: auto;
+}
+
+.card:hover{
+    transform: scale(1.10);
+    transition: 0.7s ease;
+}
+.card-image {
+    grid-area: image;  
+    text-align: left;
+}
+
+
+.card-image img{
+    border-radius: 15px;
+    width: 300px;
+    height: 140px;
+
+}
+
+
+.card-text{
+    grid-area: text;
+    margin-top: 10px;
+    text-align: left;
+}
+.card-text h2{
+   font-family: roboto;
+   
+}
+.card-text p{
+    font-size: 14px;
+    color: #777;
+    padding: 5px;
+}
+
+.card-stats{
+    grid-area: stats;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    border-radius: 15px;
+
+}
+
+.card-stats .stat{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer{
+    display: grid;
+    grid-template-rows: 1fr;
+    max-width: 100%;
+    max-height: 80px;
+    background-color: #EEE;
+    justify-content: center;
+}
+.footer p{
+    color: #999;
+    padding: 25px;
+}
+
+/* ===ABOUT=== */
+
+.text-header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 960px;
+    justify-self: center;
+    margin: 50px auto;
+}
+.text-header h1{
+    font-size: 24px;
+    font-weight: bold;
+    font-family: roboto;
+    color: var(--color-font);
+}
+
+.text-box{
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 960px;
+    justify-self: center;
+    margin: auto;
+    justify-items: stretch;
+}
+
+.text-box{
+    font-size: 18px;
+    font-family: roboto;
+    color: #444;
+
+}
+
+/* ===MODAL=== */
+
+.modal-overlay{
+    background-color: rgba(0, 0, 0, 0.30);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal{
+    background-color: #fff;
+    width: 660px;
+    height: 413px;
+    border-radius: 16px;
+    margin: 15vh auto;
+    position: relative;
+}
+.modal .close-modal{
+    color: #999999;
+    font-size: 16px;
+    font-family: roboto;
+    position: absolute;
+    cursor: pointer;
+    right: 300px;
+    top: 370px;
+}
+
+.modal-overlay.active{
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s ease;
+}
+.modal-content .card-image img{
+    width: 100%;
+    height: 100%;
+}

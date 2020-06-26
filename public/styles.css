@@ -352,6 +352,4 @@ body {
 
 .recipe-text-box.active {
     display: none;
-    transition: 0,5 ease;
-
 }

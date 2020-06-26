@@ -311,17 +311,17 @@ body {
 
 }
 
-.recipe-text-header{
+.recipe-text-header {
     display              : grid;
-    grid-template-columns: 150px 80px;
+    grid-template-columns: 300px 80px;
     max-width            : 960px;
-    margin-top: 20px;
+    margin-top           : 20px;
 
 }
 
 .recipe-text-header h2 {
-    font-size : 24px;
-    color     : var(--color-font);
+    font-size: 24px;
+    color    : var(--color-font);
 
 }
 
@@ -329,14 +329,16 @@ body {
     font-size : 15px;
     color     : #999999;
     margin-top: 8px;
-    
+
 
 }
+
 .recipe-text-header h3:hover {
-    color     : #555;
+    color : #555;
     cursor: pointer;
 
 }
+
 .recipe-text-box {
     margin-top  : 20px;
     padding-left: 20px;
@@ -345,11 +347,7 @@ body {
 }
 
 .recipe-text-box-info {
-    color: #444444;
-    margin-top  : 20px;
+    color     : #444444;
+    margin-top: 20px;
 
-}
-
-.recipe-text-box.active {
-    display: none;
 }

@@ -6,6 +6,8 @@ const data = require('./data')
 
 
 server.use(express.static('public'))
+
+
 server.set("view engine", "njk")
 
 nunjucks.configure("views", {
@@ -29,16 +31,16 @@ server.get('/recipes', (req, res) => {
 server.get("/recipes/:index", function (req, res) {
     const recipes = data // Array de receitas carregadas do data.js
     const recipeIndex = req.params.index;
-    const recipe = recipes.find((e) => {
-        if (e.id == recipeIndex)
-            return true
+    const recipe = recipes.find((e)=>{
+        if(e.id == recipeIndex)
+        return true
     })
 
-    if (!recipe) {
+    if(!recipe){
         return res.render("not-found")
     }
 
-    return res.render("recipe", { recipe: recipe })
+return res.render("recipe", {recipe})
 })
 
 server.use((req, res) => {
